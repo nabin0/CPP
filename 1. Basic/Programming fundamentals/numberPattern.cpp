@@ -12,37 +12,35 @@ using namespace std;
 
 int main()
 {
-    int n;
+    int n = 5;
     cin >> n;
 
     for (int i = 0; i <= n; i++)
     {
         // Printing space
-        for (int s = 0; s < n-i; s++)
+        for (int s = 0; s < n - i; s++)
         {
-            cout<<" ";
+            cout << " ";
         }
 
         // For values (increasing)
         int val = i;
         for (int p = 0; p < i; p++)
         {
-            cout<<val;
+            cout << val;
             val += 1;
         }
 
         // (decreasing order)
         val = val - 2;
-        for (int p = 0; p < i; p++)
+        for (int p = 0; p < i - 1; p++)
         {
-        cout<<val;
-        val--;
+            cout << val;
+            val--;
         }
-        
 
-// New line
-        cout<<endl;
-        
+        // New line
+        cout << endl;
     }
     return 0;
 }
