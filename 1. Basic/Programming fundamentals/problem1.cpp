@@ -11,7 +11,8 @@ Sample Input: 1
 -100
 49
 Output Format: Print all the numbers before the cumulative sum become negative.
-Sample Output: 1
+Sample Output:
+ 1
 2
 88
 

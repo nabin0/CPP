@@ -1,13 +1,6 @@
 /*
 Problem Name: Print reverse
-Problem Difficulty: 1
-Problem Constraints: 0 <= N <= 1000000000
-Problem Description:
-Take N as input, Calculate it's reverse also Print the reverse.
-Input Format: 
-Sample Input: 123456789
-Output Format: 
-Sample Output: 987654321
+
 */
 
 #include <iostream>

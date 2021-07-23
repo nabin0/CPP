@@ -1,0 +1,6 @@
+It is a search algorith used to find element in array[DS].
+
+Time Complexity of Binary search:
+   ->O(logn)  [Worst Case]
+   ->θ(logn)  [Avg case]
+   ->Ω(1)     [Best case]

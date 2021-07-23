@@ -1,13 +1,6 @@
 /*
 Problem Name: Check prime
-Problem Difficulty: None
-Problem Constraints: 2 < N <= 1000000000
-Problem Description:
-Take as input a number N, print "Prime" if it is prime if not Print "Not Prime".
-Input Format: 
-Sample Input: 3
-Output Format: 
-Sample Output: Prime
+
 */
 
 #include <iostream>
