@@ -62,7 +62,7 @@ while(a > 0 && b>0){
     b/=10;
 }
 
-// Attending leftover digits in a
+// loop for leftover digits in a
 while(a >0){
     if(r ==1){
         if(a%2==1){
@@ -82,7 +82,7 @@ while(a >0){
 }
 
 
-// Attending leftover digits in b
+// loop for leftover digits in b
 while(b >0){
     if(r ==1){
         if(b%2==1){

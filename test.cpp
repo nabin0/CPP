@@ -2,8 +2,20 @@
 using namespace std;
 
 int main(){
-char a = '8';
-int b = a-'2';
-cout<<b<<endl;
+int n;
+cin>>n;
+
+int arr[n];
+for (int i = 0; i < n; i++)
+{
+    cin>>arr[i];
+}
+
+
+for (int i = 0; i < n; i++)
+{
+    cout<<arr[i]<<' ';
+}
+
 return 0;
 }

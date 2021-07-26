@@ -25,6 +25,7 @@
 *.la
 *.a
 *.lib
+*.bin
 
 # Executables
 *.exe
@@ -34,3 +35,4 @@
 
 # Other
 *.vscode
+*.cph
