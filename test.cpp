@@ -1,10 +1,13 @@
-#include <iostream>
+#include<iostream>
+#include<vector>
 using namespace std;
 
-int main()
-{
-    int arr[8] = {0};
-    int n = size_t(arr) / (sizeof(int));
-    cout << n << endl;
-    return 0;
+int main(){
+vector<int> v(5, 72);
+
+for(auto elem:v){
+    cout<<elem<<" ";
+}
+
+return 0;
 }

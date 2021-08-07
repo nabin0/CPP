@@ -6,12 +6,8 @@ int fibonacci(int n){
     int a = 0;
     int b= 1;
 
-    if(n ==1){
-        return 1;
-    }
-    if (n == 0)
-    {
-        return 0;
+    if(n ==1 || n == 0){
+        return n;
     }
     
     int lstFib = fibonacci(n-1) + fibonacci(n-2);
