@@ -1,0 +1,4 @@
+ADT: ADT are the way of classifying data structure by providing a minimal expected
+     interface and set of methods.
+
+Array ADT: it holds the collection of elements accessible by index
