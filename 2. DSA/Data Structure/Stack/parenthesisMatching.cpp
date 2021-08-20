@@ -20,6 +20,7 @@ void push(struct stack *, char);
 int parenthesisMatching(string str)
 {
     struct stack *s = createStack(45);
+    
     int i = 0;
     while (str[i] != '\0')
     {

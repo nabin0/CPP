@@ -166,6 +166,7 @@ int main()
     // deletionAtIndex(head,2);
     // deletionAtEnd(head);
     // deletionAfterANode(second);
+
     deletionOfElement(head,56);
 
     traversingList(head);
