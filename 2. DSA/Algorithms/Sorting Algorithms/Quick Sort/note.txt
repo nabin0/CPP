@@ -1,0 +1,15 @@
+Rule: Find the minimum element from unsorted array and swap it with the element at the begining of unsorted array.
+
+Time Complexity:
+   ->O(n^2)  [Worst Case]
+   ->θ(nlogn)  [Avg case]
+   ->Ω(nlogn)    [Best case]
+
+Space complexity: Inplace algorithm 
+
+Adaptive: No (Adaptive means if array is already sorted it should take less time to sort)
+
+Recursive: Yes
+
+Stable : NO (stability of sorting algo means if there are 2 or  more same value in input then in output these value will be in order as in input array)
+
