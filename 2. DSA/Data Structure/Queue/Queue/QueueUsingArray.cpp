@@ -98,6 +98,8 @@ int main()
     q->enqueue(676);
     q->enqueue(676);
     q->enqueue(676);
+    q->dequeue();
+    q->enqueue(676);
     q->enqueue(45);
     int dqdata = q->dequeue();
     q->display();
