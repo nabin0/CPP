@@ -5,3 +5,13 @@ Time Complexity:
    ->O(n^2)  [Worst Case]
    ->θ(n^2)  [Avg case]
    ->Ω(n^2)     [Best case]
+
+
+Space complexity: Inplace algorithm O(n)
+
+Adaptive: Not ny default  (Adaptive means if array is already sorted it should take less time to sort)
+
+Recursive: no
+
+Stable : yes (stability of sorting algo means if there are 2 or  more same value in input then in output these value will be in order as in input array)
+
