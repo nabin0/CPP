@@ -1,29 +1,10 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-class Test
-{
-    int a;
-    int arr[5];
-
-public:
-    Test()
-    {
-        a = 23;
+int main(){
+    int arr[]  = {2,3,5,3,1,5};
+    for(auto i : arr){
+        cout<<i<<" ";
     }
-
-    void display()
-    {
-        cout << "Displaying" << endl;
-    }
-};
-
-int main()
-{
-
-    Test obj;
-    obj.display();
-
     return 0;
 }
