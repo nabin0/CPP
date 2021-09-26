@@ -1,0 +1,3 @@
+1. Write a program to add two 16 bit numbers ABCDH and 6543H and store the result in register BCD.
+2. Write a program to add two 16bit numbers present in register pair BC and DE store 16-bit result in register pair HL.
+3. Two 16-bit numbers are present in memory location including from 7000H onwards. ADD these two and store 17bit in memory 7004 on wards

@@ -1,0 +1,13 @@
+	LDA 7000H
+	LXI H, 7002H
+    ADD M
+    STA 7004H
+    LDA 7001H
+    LXI H , 7003H
+    ADC M
+    STA 7005H
+    MVI A, 00H
+    ADC A
+    STA 7006H
+    HLT
+   
