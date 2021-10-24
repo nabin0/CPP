@@ -10,7 +10,7 @@ int min_height(int arr[], int n , int k){
 
     sort(arr,arr+n); //sorting the given array
 
-    int max_diff = arr[n-1] - arr[0]; //maximum difference in between the toewr i.e largest height - smallest height
+    int max_diff = arr[n-1] - arr[0]; //maximum difference in between the tower i.e largest height - smallest height
     int maximum = arr[n-1]-k; //Let maximum height is the last height - k
     int minimum = arr[0] +k; //smallest height be arr[0] + k because we have to either add or sub k and arr[0] is the smallest height
     int temp = 0;

@@ -6,16 +6,17 @@
 4. Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo
 5. Move all the negative elements to one side of the array 
 6. Find the Union and Intersection of the two sorted arrays.
-7. Write a program to cyclically rotate an array by one.
-8. find Largest sum contiguous Subarray [V. IMP]
-9. Minimise the maximum difference between heights [V.IMP]
+7. Write a program to cyclically rotate an array by one. 
+8. find Largest sum contiguous Subarray [V. IMP] 
+9. Minimise the maximum difference between heights [V.IMP] 
 
+10. Minimum no. of Jumps to reach end of an array  (TODO)
 
-10. Minimum no. of Jumps to reach end of an array
-11. find duplicate in an array of N+1 Integers
+11. Find duplicate in an array of N+1 Integers
 12. Merge 2 sorted arrays without using Extra space.
 13. Kadane's Algo [V.V.V.V.V IMP]
 14. Merge Intervals
+
 15. Next Permutation
 16. Count Inversion
 17. Best time to buy and Sell stock
@@ -38,4 +39,3 @@
 34. Minimum no. of operations required to make an array palindrome
 35. Median of 2 sorted arrays of equal size
 36. Median of 2 sorted arrays of different size
-
