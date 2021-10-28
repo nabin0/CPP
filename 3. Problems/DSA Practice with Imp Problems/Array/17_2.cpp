@@ -1,10 +1,13 @@
+
+//Maximize the profit can buy and  sell multiple time
+
 #include <iostream>
 using namespace std;
 
 int stockProfit(int *arr, int start, int end)
 {
     {
-        if (start >= end)
+        if (start > end)
         {
             return 0;
         }
@@ -16,14 +19,10 @@ int stockProfit(int *arr, int start, int end)
             {
                 if (arr[j] > arr[i])
                 {
-                    int left = stockProfit(arr, start, i - 1);
-                    int right = stockProfit(arr, j + 1, end);
-                    int currProfit = arr[j] - arr[i] +left +right;
+                    int currProfit = arr[j] - arr[i] + stockProfit(arr, start, i - 1) +stockProfit(arr, j + 1, end); 
                     profit = max(profit, currProfit);
-                    cout<<"i : "<<i<<"   j: "<<j<<"   left: "<<left<<"   right: "<<right<<"   curr: "<<currProfit<< "   profit: "<<profit<<endl;
                 }
             }
-            cout<<endl<<endl;
         }
 
         return profit;
@@ -33,11 +32,10 @@ int stockProfit(int *arr, int start, int end)
 int main()
 {
 
-    int arr[] = {40, 110, 80,160};
+    int arr[] = {40, 100, 120, 20, 400, 340, 420};
     int n = sizeof(arr) / sizeof(arr[0]);
-    int p = stockProfit(arr, 0, n - 1);
 
-    cout <<"profit : "<< p;
+    cout << stockProfit(arr, 0, n - 1);
 
     return 0;
 }
