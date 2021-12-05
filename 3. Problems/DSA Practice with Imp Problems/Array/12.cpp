@@ -4,12 +4,12 @@ using namespace std;
 void mergeArray(int *A1, int n1, int *A2, int n2)
 {
     // To  get the solution we first have to sort first array A1 
-    // then secong arraay willl contain left elements and after sorting that we will get soln
+    // then secong arraay willl contain left elements and after sorting that we will get solution
     int lastElem;
     int i = 0, j = 0;
     while (i < n1 && j < n2)
     {
-        if (A1[i] <= A2[j]) // if first array ith elem is smaller than second arrays  jth elem  inc i
+        if (A1[i] <= A2[j]) // if first array ith elem is smaller than second arrays jth elem increasei 
         {
             i++;
         }
@@ -34,7 +34,6 @@ void mergeArray(int *A1, int n1, int *A2, int n2)
                 A2[k] = A2[k + 1];
             }
             A2[temp - 1] = lastElem;
-            j++;
         }
     }
 

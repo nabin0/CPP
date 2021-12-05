@@ -1,43 +1,42 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-int stockProfit(int *arr, int start, int end)
-{
+int largestSum(int *arr, int n){
+    int maxSum = 0;
+    int tempSum= 0;
+    for (int i = 0; i < n; i++)
     {
-        if (start >= end)
+        for (int j = i; j < n; j++)
         {
-            return 0;
-        }
-
-        int profit = 0;
-        for (int i = start; i < end; i++)
-        {
-            for (int j = i + 1; j <= end; j++)
+            tempSum = 0;
+            for (int k = i; k <= j; k++)
             {
-                if (arr[j] > arr[i])
-                {
-                    int left = stockProfit(arr, start, i - 1);
-                    int right = stockProfit(arr, j + 1, end);
-                    int currProfit = arr[j] - arr[i] +left +right;
-                    profit = max(profit, currProfit);
-                    cout<<"i : "<<i<<"   j: "<<j<<"   left: "<<left<<"   right: "<<right<<"   curr: "<<currProfit<< "   profit: "<<profit<<endl;
-                }
+                tempSum+=arr[k];
             }
-            cout<<endl<<endl;
-        }
-
-        return profit;
-    }
+            maxSum = max(maxSum, tempSum);
+        }    
+    } 
+    return maxSum;
 }
 
-int main()
-{
+int kdanesAlgo(int *arr, int n){
+    int maxSum = 0;
+    int tempSum =0;
+    for (int i = 0; i < n; i++)
+    {
+        if(tempSum < 0){
+            tempSum = 0;
+        }
+        tempSum += arr[i]; t
+        maxSum = max(maxSum, tempSum);
+    }
+    return maxSum;
+}
 
-    int arr[] = {40, 110, 80,160};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int p = stockProfit(arr, 0, n - 1);
-
-    cout <<"profit : "<< p;
-
+int main(){
+    int arr[] = {1,3,5,6,8,9};
+    int s = sizeof(arr)/sizeof(arr[0]);
+    cout<<largestSum(arr,s)<<endl;
+    cout<<kdanesAlgo(arr, s);
     return 0;
 }

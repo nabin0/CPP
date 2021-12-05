@@ -26,14 +26,8 @@ void bubbleSort(int arr[], int n){
 }
 
 int main(){
-int n;
-cin>>n;
-
-int arr[n];
-for (int i = 0; i < n; i++)
-{
-    cin>>arr[i];
-}
+int arr[] = {2,7,3,5};
+int n  = 4;
 
 bubbleSort(arr,n);
 return 0;

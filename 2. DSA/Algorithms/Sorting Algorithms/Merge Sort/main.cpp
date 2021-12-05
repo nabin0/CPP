@@ -75,5 +75,6 @@ int main()
     int size = sizeof(arr) / sizeof(arr[0]);
     mergeSort(arr, 0, size - 1);
     printArr(arr, size);
+
     return 0;
 }

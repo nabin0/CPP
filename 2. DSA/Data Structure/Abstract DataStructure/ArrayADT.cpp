@@ -15,7 +15,7 @@ public:
         this->used_size = used_size;
         this->ptr = new int(total_size);
     }
-
+    
     //Setting value for each elements
     int set_val(MyArrAdt *ptr_obj)
     {

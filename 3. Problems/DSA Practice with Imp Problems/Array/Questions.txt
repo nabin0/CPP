@@ -4,7 +4,7 @@
     e.g: if arr[] = {1,4,5,6,7} and k = 2
     then the 1st largest element is 7 but k=2 so kth (i.e 2nd largest ) element is 6
 4. Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo
-5. Move all the negative elements to one side of the array 
+5. Move all the negative elements to one side of the array
 6. Find the Union and Intersection of the two sorted arrays.
 7. Write a program to cyclically rotate an array by one. +
 8. find Largest sum contiguous Subarray [V. IMP] 
@@ -19,11 +19,10 @@
 15. Next Permutation
 16. Count Inversion  
 17. Best time to buy and Sell stock and max profit
-
 18. find all pairs on integer array whose sum is equal to given number
 19. find common elements In 3 sorted arrays
-20. Rearrange the array in alternating positive and negative items with O(1) extra space
 
+20. Rearrange the array in alternating positive and negative items with O(1) extra space
 
 21. Find if there is any subarray with sum equal to 0
 22. Find factorial of a large number
