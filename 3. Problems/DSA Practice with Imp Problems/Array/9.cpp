@@ -38,7 +38,7 @@ int min_height(int arr[], int n , int k){
 }
 
 int main(){
-    int arr[] = {1,4,5};
+    int arr[] = {2,4,5,7,8,12};
     int n = sizeof(arr)/sizeof(arr[0]);
     int k = 3;
     cout<<min_height(arr,n,k)<<endl;

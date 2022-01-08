@@ -26,7 +26,8 @@
             Interval top  = s.top();
 
             if(top.end < interval[i].start) //if conjugative item are not overlapped
-                continue;
+                {s.push(interval[i]);
+                continue;}
             else if(top.end <= interval[i].end){ //if conjugative item are overlapped
                 top.end  = interval[i].end;
                 s.pop();
@@ -43,7 +44,7 @@
         
     }
     int main(){
-        Interval itv[] = {{1,3}, {2,4},{5,6},{1,5}};
+        Interval itv[] = {{1,3}, {2,4},{5,6},{1,5}, {7,9}};
         int s = sizeof(itv)/sizeof(itv[0]);
         mergeInterval(itv,s);
         return 0;

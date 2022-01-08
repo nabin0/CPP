@@ -8,7 +8,7 @@ void max_heapify(int arr[], int i, int n){ //Makes a sub tree heap if it is not.
     int right = (i*2)+2; // right child of a node i
     int largest= i; //largest var to store idx of largest child if available
 
-    if(left <= n and arr[left] > arr[i]){ //check if left child is greater than root node. i.e if greater than ith node
+    if(left <= n and arr[left] > arr[i]){ //check if left child is greater than root node. 
         largest = left;
     }else{ 
         largest = i;

@@ -30,11 +30,16 @@ int noOfPairsOptimisedApproach(int *arr, int n, int sum){
 
     int doubleCount = 0; // double count beause we are going to count same pair 2 times e.g: (1 , 3) we count 1 for val 1 and agin 1 time for val 3 
 
+    // iterate all the elements of array and add their count value to doublecount
     for (int i = 0; i < n; i++)
     {
+        // here m[sum-arr[i]] gives the count of that item present in array. this item will be considered 2 times that's why 
+        // WE have to divide double count later for eg. [1,3 ] here 1 will be added to double count doubleCount+=m[sum-arr[i]] when i = 0 and again 1 will be added when i =1
+
         doubleCount+=m[sum-arr[i]];
 
-        if(sum-arr[i] == arr[i]){
+        if(sum-arr[i] == arr[i]){ // When the element half of the sum is in the arrr for eg[1,2,3] where sum=4 , here 2 is not making any pair but still is is going 
+         //to be count. if [1,2,3,2] is case then count of m[2] =2; for each two 2 will be added into doublecount so to avoid this the count is decreased
             doubleCount--;
         }
     }

@@ -45,9 +45,9 @@ int kdanes_algo_for_max_subarr_sum(int arr[], int n ){
         }
         max_sum_till = max(max_sum_till, tempsum);
     }
-    
-    return max_sum_till;
 
+    return max_sum_till;
+    
 }
 
 int main()

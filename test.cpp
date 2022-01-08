@@ -1,42 +1,44 @@
 #include<iostream>
+#include<climits>
 using namespace std;
 
-int largestSum(int *arr, int n){
-    int maxSum = 0;
-    int tempSum= 0;
-    for (int i = 0; i < n; i++)
+void commonElements(int *a, int *b, int *c, int na, int nb, int nc){
+    int i = 0, j=0, k=0;
+    int preva,prevb,prevc; 
+     preva=prevb=prevc =INT_MIN;
+    
+    while(i < na && j < nb && k < nc)
     {
-        for (int j = i; j < n; j++)
-        {
-            tempSum = 0;
-            for (int k = i; k <= j; k++)
-            {
-                tempSum+=arr[k];
-            }
-            maxSum = max(maxSum, tempSum);
-        }    
-    } 
-    return maxSum;
-}
+        while(i < na && a[i] == preva)
+            i++;
+        while(j < nb && b[j] == prevb)
+            j++;
+        while(k < nc && c[k] == prevc)
+            k++;
 
-int kdanesAlgo(int *arr, int n){
-    int maxSum = 0;
-    int tempSum =0;
-    for (int i = 0; i < n; i++)
-    {
-        if(tempSum < 0){
-            tempSum = 0;
+        if(a[i] == b[j] && b[j] == c[k]){  
+            preva = a[i];
+            prevb = b[j];
+            prevc = c[k];
+            cout<<a[i]<<" ";
+            i++;j++;k++;
+        }else if(a[i]< b[j]){
+            i++;
+        }else if(b[j] < c[k]){
+            j++;
+        }else{
+            k++;
         }
-        tempSum += arr[i]; t
-        maxSum = max(maxSum, tempSum);
     }
-    return maxSum;
 }
 
 int main(){
-    int arr[] = {1,3,5,6,8,9};
-    int s = sizeof(arr)/sizeof(arr[0]);
-    cout<<largestSum(arr,s)<<endl;
-    cout<<kdanesAlgo(arr, s);
+    int A[] = {1,2,2,2,2,2,3,5,7};
+    int B[] = {2,5,8,9};
+    int C[] = {2,4,5,7,9,20};
+    int sA = sizeof(A)/sizeof(A[0]);
+    int sB = sizeof(B)/sizeof(B[0]);
+    int sC = sizeof(C)/sizeof(C[0]);
+    commonElements(A,B,C,sA,sB,sC);
     return 0;
 }
