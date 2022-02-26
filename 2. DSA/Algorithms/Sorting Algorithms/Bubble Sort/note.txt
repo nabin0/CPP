@@ -1,10 +1,10 @@
-Rule: Repetedly seap the two adjacent element if they are in wrong order.
+Rule: Repetedly swap the two adjacent element if they are in wrong order.
 i.e arr[i] > srr[i+1]
 
 Time Complexity:
    ->O(n^2)  [Worst Case]
    ->θ(n^2)  [Avg case]
-   ->Ω(n^2)     [Best case]
+   ->Ω(n^2)    [Best case]
 
 
 Space complexity: Inplace algorithm O(n)
