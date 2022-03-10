@@ -172,3 +172,19 @@ int main()
     traversingList(head);
     return 0;
 }
+
+/*
+
+Node * LL::reverse(Node * node){
+        if(node == nullptr || node->next == nullptr){
+        return node;
+    }
+
+    Node *ptr = reverse(node->next);
+    node->next->next = node;
+    node->next = nullptr;
+
+    return ptr;
+}
+
+*/
