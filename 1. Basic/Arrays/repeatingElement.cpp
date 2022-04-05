@@ -36,6 +36,25 @@ void repeatMin(int arr[], int n)
     }
 }
 
+
+int repeating_element(int *A, int n){ // Frst repeating element
+    const int N = 1e5;
+    int arr[N] ;
+        for (int i = 0; i < N; i++)
+    {
+        arr[i] = -1;
+    }
+
+    for(int i = 0 ;i < n; i++){
+        if(arr[A[i]] != -1){
+            return arr[A[i]];
+        }
+        arr[A[i]] = i;
+    }
+    return -1;
+}
+
+
 int main()
 {
     int n;
@@ -47,5 +66,6 @@ int main()
         cin >> arr[i];
     }
     repeatMin(arr, n);
+    cout << repeating_element(arr, n);
     return 0;
 }

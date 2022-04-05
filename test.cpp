@@ -1,35 +1,23 @@
 #include<iostream>
-#include<vector>
+#include<string>
 using namespace std;
 
-void heapify(int arr[],int i, int n){
-    int left = (i*2) +1;
-    int right = (i*2) + 2;
-
-    int min  = i;
-    if(left < n && arr[left] < arr[min])
-        min = left;
-    if(right < n && arr[right] < arr[min])
-        min = right;
-    
-    if(min != i){
-        swap(arr[i], arr[min]);
-        heapify(arr,min,n);
+void solve(string ip, string op){
+    if(ip.length() == 0){
+        cout  << op << endl;
+        return;
     }
-}
 
-void build_heapify(int *arr, int n){
-    for(int i = (n/2)-1; i >=0; i--){
-        heapify(arr,i,n);
-    }
-}
+    string s1 = op;
+    string s2 = op;
 
+    s2.push_back(ip[0]);
+    ip.erase(ip.begin() + 0);
+    solve(ip,s1);
+    solve(ip,s2);
+}
 int main(){
-    int arr[] = {3, 4, 2, 5, 6, 1, 9}; //Correct answer: 1 4 2 5 6 3 9
-    int n = sizeof(arr) / sizeof(arr[0]);
-    build_heapify(arr,n);
-
-    for(int i = 0; i < n ; i++)
-        cout << arr[i] << ' ';    
+    string s = "ABC";
+    solve(s, "");
     return 0;
 }

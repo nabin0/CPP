@@ -188,3 +188,198 @@ Node * LL::reverse(Node * node){
 }
 
 */
+
+
+
+/* 
+# ==================== Using Class ====================
+*/
+
+/*
+
+#include<iostream>
+
+struct Node{
+    int data;
+    Node * next;
+    Node(int data){
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+
+class LL{
+    Node * head = nullptr;
+    Node * reverse(Node *Node);
+    public:
+    void traversal();
+    void insert(int data);
+    void deletion(int data);
+    void updation(int data, int key);
+    Node * search(int key);
+    void sort();
+    void reverse();
+    void reverseIter();
+};
+
+void LL::traversal(){
+    if(head== nullptr)
+        return;
+    Node * temp = head;
+    while(temp){
+        std::cout << temp->data << ' ';
+        temp = temp->next;
+    }
+}
+
+void LL::insert(int data){
+    Node * newNode = new Node(data);
+
+    if(head == nullptr){
+        head = newNode;
+        return;
+        }
+
+    Node *temp = head;
+    while (temp->next)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
+void LL::deletion(int data){
+    if(head == nullptr){
+        return;
+    }
+
+    if(head->next == nullptr){
+        if(head->data == data){
+            head = nullptr;
+            return;
+        }else{
+            return;
+        }
+    }
+
+    Node * temp = head;
+    while(temp->next != nullptr){
+        if(temp->next->data == data){
+            break;
+        }
+        temp= temp->next;
+    }
+    if(temp->next == nullptr){
+        return;
+    }
+    Node * rm = temp->next;
+    temp->next = temp->next->next;
+    delete(rm);
+    
+}
+
+void LL::updation(int data , int key){
+    Node * temp = head;
+    while(temp){
+        if(temp->data == data){
+            break;
+        }
+        temp = temp->next;
+    }
+    if(temp == NULL){
+        return;
+    }
+    temp->data = key;
+}
+
+Node * LL::search(int key){
+    Node * res = nullptr;
+    Node * temp = head;
+    while(temp){
+        if(temp->data == key){
+            res = temp;
+        }
+        temp = temp->next;
+    }
+    return res;
+}
+
+void LL::sort(){
+    Node * curr= head;
+    Node * nextptr;
+
+    while(curr){
+        nextptr = curr->next;
+        while(nextptr){
+            if(curr->data > nextptr->data){
+                int temp = curr->data;
+                curr->data = nextptr->data;
+                nextptr->data = temp;
+            }
+            nextptr = nextptr->next;
+        }
+        curr = curr->next;
+    }
+}
+
+void LL::reverse(){
+    if(head){
+        head = reverse(head);
+    }
+}
+
+Node * LL::reverse(Node * node){
+    if(node == nullptr || node->next == nullptr){
+        return node;
+    }
+
+    Node * res = reverse(node->next);
+    node->next->next = node;
+    node->next = nullptr;
+    return res;
+}
+
+void LL::reverseIter(){
+    Node * curr = head;
+    Node * nextptr;
+    Node * prev = nullptr;
+
+    while(curr){
+        nextptr = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = nextptr;
+
+    }
+    head = prev;
+}
+
+int main(){
+
+    LL l;
+    l.insert(3);
+    l.insert(56);
+    l.insert(32);
+    l.deletion(13);
+    l.insert(21);
+    l.updation(32, 12);
+
+    // l.reverse();
+    // l.reverseIter();
+
+    l.sort();
+
+    l.traversal();
+
+    Node * founnd = l.search(126);
+
+    if(founnd){
+        std::cout << "\nThe item is found " << founnd->data << std::endl;
+    }else{
+        std::cout << "\nThe item is not found " << std::endl;
+    }
+    
+    return 0;
+}
+
+*/
