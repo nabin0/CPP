@@ -23,7 +23,7 @@ void print_job_sequence_maxProfit(Job arr[], int n){// n is number of jobs
 
     for (int i = 0; i < n; i++) //traverse all elements in decreasing profit order
     {
-        for (int j = min(n,arr[i].deadline) -1; j >=0; j--) //checking if the slot is free from the last of deadline value or available max time(n)
+        for (int j = min(n,arr[i].deadline) -1; j > 0; j--) //checking if the slot is free from the last of deadline value or available max time(n)
         {
             if(slot[j] == false){ 
                 resultIdx[j] = i; //if slot is availabe put job at that position 
@@ -35,7 +35,7 @@ void print_job_sequence_maxProfit(Job arr[], int n){// n is number of jobs
     }
 
     //Printing Id's of job in sequence for max profit
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
         cout<<arr[resultIdx[i]].id<<" ";
     }cout<<endl;

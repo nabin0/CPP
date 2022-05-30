@@ -48,6 +48,18 @@ void inOrderTraversal(struct node *root)
     }
 }
 
+// Height of tree
+int height(struct node * root){
+    if(root == nullptr){
+        return 0;
+    }
+
+    int lht = height(root->left);
+    int rht = height(root->right);
+
+    return 1 + max(lht, rht);
+}
+
 int main()
 {
     //Creating nodes
@@ -75,5 +87,9 @@ int main()
     inOrderTraversal(root);
     cout << endl;
 
+    // Height of the binary tree
+    int h = height(root);
+
+    cout << "height of tree is : " << h << endl;
     return 0;
 }
