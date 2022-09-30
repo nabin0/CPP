@@ -40,10 +40,10 @@ int kdanes_algo_for_max_subarr_sum(int arr[], int n ){
     for (int i = 0; i < n; i++)
     {
         tempsum+=arr[i];
+        max_sum_till = max(max_sum_till, tempsum);
         if(tempsum < 0){
             tempsum = 0;
         }
-        max_sum_till = max(max_sum_till, tempsum);
     }
 
     return max_sum_till;

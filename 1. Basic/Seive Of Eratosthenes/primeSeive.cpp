@@ -5,7 +5,7 @@ using namespace std;
 void primeSeive(int n)
 {
     //Initialize array
-    int prime[100] = {0};
+    int prime[n] = {0};
 
     //Put value 1 if value is multiple of i
     for (int i = 2; i * i < n; i++)
@@ -26,11 +26,31 @@ void primeSeive(int n)
     }
     cout << endl;
 }
+
+void primeSeive1(int n){
+    int arr[n+1]{0};
+
+    for(int i = 2; i*i <= n; i++){
+        if(arr[i] == 0){
+            for(int j = i; j*i <= n; j++){
+                arr[j*i] = 1;
+            }
+        }
+    }
+
+    // Print result
+    for(int i = 2; i <= n; i++){
+        if(arr[i] == 0)
+            cout << i << ' ';
+    }cout << endl;
+}
+
 int main()
 {
-
     int n;
+    cout << "Enter a number: " ;
     cin >> n;
     primeSeive(n);
+    primeSeive1(n);
     return 0;
 }

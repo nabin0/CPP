@@ -34,13 +34,28 @@ void rearrangeArray(int arr[], int n)
     }
 }
 
+
+void rearrange(int * arr, int n){
+    
+    for(int i = 0, j = 0; i < n; i++){
+        
+        if(arr[i] < 0){
+            if(i != j){
+                swap(arr[i], arr[j]);
+            }
+            j++;
+        }
+    }
+}
+
 int main()
 {
-    int arr[] = {2, 4, 234, 24, 0, -23, -1, -22};
-    rearrangeArray(arr, 8);
+    int arr[] = {-1, 0,2,3,-4};
+    int n = sizeof(arr)/4;
+    rearrange(arr, n);
 
     // printing array
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
     }

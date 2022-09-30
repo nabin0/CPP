@@ -19,7 +19,6 @@ int *ArrayUnion(int A[], int B[], int n1, int n2)
         }
         else
         {
-
             unionArr[i++] = A[j++];
             k++;
         }

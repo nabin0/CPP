@@ -1,14 +1,6 @@
 #include <iostream>
 using namespace std;
 
-void PrintArr(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-}
 
 void primeFactorization(int n)
 {
@@ -38,16 +30,34 @@ void primeFactorization(int n)
 
     while (n != 1)
     {
-        cout << spf[n] << " ";
+        cout << n << " ";
         n = n / spf[n];
     }
+}
+
+void primeFactor(int n){
+    int arr[n+1]{0};
+    for(int i = 2; i*i <= n; i++){
+        if(arr[i] == 0){
+            for(int j = i; j*i <= n; j++){
+                if(arr[j*i] == 0)
+                    arr[j*i] = i;
+            }
+        }
+    }
+    while(n != 1){
+        cout << n << ' ' ;
+        n = n/ arr[n];
+    }cout << endl;
 }
 
 int main()
 {
     int n;
+    cout << "Enter a number: ";
     cin >> n;
     // n = 42;
-    primeFactorization(n);
+    // primeFactorization(n);
+    primeFactor(n);
     return 0;
 }
